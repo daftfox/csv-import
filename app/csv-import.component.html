@@ -1,0 +1,32 @@
+<div class="csv-import">
+
+    <input type="file" (change)="changeListener($event)"/>
+
+    <div class="wrapper" *ngIf="data">
+
+        <table class="table-fill">
+            <thead>
+                <tr>
+                    <th *ngFor="let header of headers"
+                        (click)="orderList(header)"
+                        class="sort">
+                        {{header}}
+                        <span class="pull-right white"
+                              *ngIf="order == header">v</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="table-hover">
+                <!-- TODO: add option to reverse current sorting -->
+                <tr *ngFor="let record of data | orderBy: [order]">
+                    <td *ngFor="let header of headers">
+                        <span *ngIf="!isDate(record[header])">{{record[header]}}</span>
+                        <span *ngIf="isDate(record[header])">{{record[header] | date: 'dd-MM-yyyy'}}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
