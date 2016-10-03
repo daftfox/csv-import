@@ -11,4 +11,4 @@ npm run test
 # Run:
 npm start
 
-Build: [![CircleCI](https://circleci.com/gh/daftfox/tour-of-heroes-ci/tree/master.svg?style=svg)](https://circleci.com/gh/daftfox/tour-of-heroes-ci/tree/master)
+Build: [![CircleCI](https://circleci.com/gh/daftfox/csv-import/tree/master.svg?style=svg)](https://circleci.com/gh/daftfox/csv-import/tree/master)
